@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Isi Galeri - Gallery Algazel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery Algazel</h1>
+        <nav><a href="pilih_folder.html">KEMBALI KE FOLDER</a></nav>
+    </header>
+
+    <main class="container">
+        <h2 class="title">Koleksi Kenangan</h2>
+        <div id="gallery-container" class="gallery-container"></div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="tutupLightbox()">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <img id="fullImage" src="" alt="Full View">
+            <a id="downloadBtn" href="#" download class="download-btn" onclick="event.stopPropagation()">Download Foto</a>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Gallery Algazel</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

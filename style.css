@@ -1,0 +1,121 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f0f7f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0A3D62; /* Biru Gelap */
+    color: white;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: #F4D03F; /* Kuning Soft */
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #F4D03F;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header a:hover { background: #F4D03F; color: #0A3D62; }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0A3D62 0%, #48C1BB 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 20px; }
+
+.cta-button {
+    background-color: #F4D03F;
+    color: #0A3D62;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-button:hover { transform: scale(1.05); background-color: #e0bb2a; }
+
+/* Grid Layouts */
+.container { flex: 1; max-width: 1000px; margin: 0 auto; padding: 40px 20px; width: 100%; box-sizing: border-box; }
+.title { text-align: center; color: #0A3D62; margin-bottom: 40px; }
+
+/* Folder Grid - 2 Baris (3 Kolom) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.folder {
+    background-color: #ADD7BE; /* Teal/Biru Muda */
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: #0A3D62;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 8px solid #48C1BB;
+}
+
+.folder:hover { transform: translateY(-10px); background-color: #F4D03F; border-bottom-color: #e0bb2a; }
+
+/* Galeri Foto */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-item img {
+    width: 100%; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: 0.3s;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 61, 98, 0.95); z-index: 2000; justify-content: center; align-items: center;
+}
+
+.lightbox-content { text-align: center; position: relative; }
+.lightbox img { max-width: 90vw; max-height: 75vh; border: 4px solid white; border-radius: 8px; }
+
+.download-btn {
+    display: inline-block; margin-top: 15px; background: #F4D03F; color: #0A3D62;
+    padding: 10px 25px; text-decoration: none; border-radius: 20px; font-weight: bold;
+}
+
+.close-btn { position: absolute; top: -50px; right: 0; color: white; font-size: 40px; cursor: pointer; }
+
+footer { background-color: #0A3D62; color: white; text-align: center; padding: 20px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+}
